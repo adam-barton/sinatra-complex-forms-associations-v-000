@@ -19,7 +19,7 @@ class PetsController < ApplicationController
       redirect "pets/#{@pet.id}"
     end
 
-    get '/pet/:id/edit' do
+    get '/pets/:id/edit' do
       binding.pry
       @pet = Pet.find(params[:pet][:id])
       erb :'pets/edit'
